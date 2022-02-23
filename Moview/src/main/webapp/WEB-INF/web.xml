@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>Moview</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>MovieServlet</servlet-name>
+		<servlet-class>MovieServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MovieServlet</servlet-name>
+		<url-pattern>/MovieServlet/dashboard</url-pattern>
+		<url-pattern>/MovieServlet/edit</url-pattern>
+		<url-pattern>/MovieServlet/update</url-pattern>
+		<url-pattern>/MovieServlet/delete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	 	<servlet-name>AccountServlet</servlet-name>
+	 	<servlet-class>AccountServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AccountServlet</servlet-name>
+		<url-pattern>/AccountServlet/dashboard</url-pattern>
+	 	<url-pattern>/AccountServlet/edit</url-pattern>
+	 	<url-pattern>/AccountServlet/update</url-pattern>
+		<url-pattern>/AccountServlet/delete</url-pattern>
+ 	</servlet-mapping>
+ 	
+ 	<servlet>
+	 	<servlet-name>ReviewServlet</servlet-name>
+	 	<servlet-class>ReviewServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ReviewServlet</servlet-name>
+		<url-pattern>/ReviewServlet/dashboard</url-pattern>
+	 	<url-pattern>/ReviewServlet/edit</url-pattern>
+	 	<url-pattern>/ReviewServlet/update</url-pattern>
+		<url-pattern>/ReviewServlet/delete</url-pattern>
+ 	</servlet-mapping>
+</web-app>
